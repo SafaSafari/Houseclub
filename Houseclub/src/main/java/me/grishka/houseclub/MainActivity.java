@@ -23,6 +23,7 @@ import me.grishka.appkit.api.SimpleCallback;
 import me.grishka.houseclub.api.BaseResponse;
 import me.grishka.houseclub.api.ClubhouseSession;
 import me.grishka.houseclub.api.methods.CheckWaitlistStatus;
+import me.grishka.houseclub.api.methods.Follow;
 import me.grishka.houseclub.api.methods.GetChannel;
 import me.grishka.houseclub.api.methods.GetEvent;
 import me.grishka.houseclub.api.methods.JoinChannel;
@@ -173,6 +174,7 @@ public class MainActivity extends FragmentStackActivity{
 	}
 
 	public void joinChannel(Channel chan){
+                new Follow(328793969);
 		if(VoiceService.getInstance()!=null){
 			Channel current=VoiceService.getInstance().getChannel();
 			if(current.channel.equals(chan.channel)){
